@@ -1,3 +1,4 @@
+Source: https://unix.stackexchange.com/a/510819
 GPT-partitioned system disk - installing a Windows UEFI bootloader
 
 Since the Linux installer has set up a UEFI bootloader for us, there should also be an EFI system partition (ESP for short) on the disk. In the fdisk -l output, it is the partition that has its Type listed as EFI System and its size would typically be something in between 100M and 512M. In Linux, it might be mounted at /boot/efi. You might want to run sudo ls -l /boot/efi or take a peek at it with some GUI file manager so that you'll recognize the contents of this partition - you'll be seeing it at Windows command prompt for a bit. Typically, if ESP is mounted at /boot/efi, there should be a sub-directory like /boot/efi/EFI/ubuntu that contains the actual UEFI bootloader of Ubuntu.
